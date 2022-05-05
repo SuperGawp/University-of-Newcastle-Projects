@@ -1,0 +1,229 @@
+/*Purpose: to introduce a CSS file;
+Name of file: style.css
+Created by: Aryan Chandra (C3360071)
+Date created: 17/09/2020 */
+body 
+{
+	background-image: url(images/mountain.jpg);
+	margin-left:1cm;
+}
+
+
+h1 
+{
+	text-align: center;
+	border: 3px solid green;
+	font-size: 250%;
+}
+
+#header2 
+{
+	font-size: 120%;
+	font-family: Arial, serif;
+}
+
+#category 
+{
+	display: inline;
+}
+
+#binaryQ input 
+{
+	float: left;
+}
+
+#included input 
+{
+	float: left;
+}
+
+#check
+{
+	display: inline;
+}
+
+#datah2
+{
+	color: red;
+}
+
+#messageBox
+{
+	box-sizing: content-box;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+}
+
+p.rev
+{
+	font-size: 15px;
+}
+
+span.REQUIRED
+{
+	color: red;
+}
+
+p 
+{
+	font-family: Arial,serif;
+	font-size: 105%
+}
+
+address.COPYRIGHT
+{
+	color: black;
+}
+
+div
+{
+	background: Bisque;
+	padding: 5px;
+	overflow: hidden;
+
+}
+
+img 
+{
+	float: left;
+	border: 5px solid black;
+}
+
+ul 
+{
+	font-size: 105%;
+}
+
+span 
+{
+	font-family: Arial, serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 109%;
+}
+
+a:link 
+{
+	color: rgb(255, 114, 106);
+}
+a:visited 
+{
+	color: blue;
+}
+a:hover 
+{
+	color: rgb(255, 94, 29);
+	font-size: 20px
+}
+a:active 
+{
+	color: green;
+}
+
+p.right 
+{
+	font-weight: bold;
+	font-style: italic;
+	color: white;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+p.rightCOPYRIGHT 
+{
+	font-weight: bold;
+	font-style: italic;
+	color: black;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+p.rightPrivacy 
+{
+	font-weight: bold;
+	font-style: italic;
+	color: black;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#rightReview
+{
+	text-align: right;
+}
+
+#right
+{
+	text-align: right;
+}
+
+.button 
+{
+    float: left;
+    overflow: hidden;
+}
+
+.button .dropButton
+{
+    font-size: 148%;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: Arial, serif;
+    margin: 0;
+}
+
+.dropDownContent 
+{
+	display: none;
+	position: absolute;
+	background-color: AliceBlue;
+	min-width: 190px;
+	font-size: 15px;
+}
+
+.dropDownContent a 
+{
+  	color: black;
+  	padding: 12px 16px;
+  	text-decoration: none;
+  	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropDownContent a:hover 
+{
+	background-color: pink;
+	font-size: 22px;
+}
+
+/* Show the dropdown menu on hover */
+.button:hover .dropDownContent 
+{
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.button:hover .dropButton
+{
+	background-color: Azure;
+}
+
+.navigation
+{
+	overflow: hidden;
+	background-color: AntiqueWhite;
+}
+
+.navigation a
+{
+	float: left;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	padding: 2px 6px;
+	text-decoration: none;
+}

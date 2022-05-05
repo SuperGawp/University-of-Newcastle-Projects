@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?> <!--Created by Aryan Chandra (C3360071). File Name: honeymoon.xml Created on: 17/09/2020-->
+<?xml-stylesheet href="holiday-xslt.xsl" type="text/xsl"?>
+
+	<!DOCTYPE Holiday [
+	<!ELEMENT Holiday (pack+)>
+	<!ELEMENT pack (packName, desc, holidayWeb?, cost, noOfNights, popularity, accomo+, couponCode?, review*, promoPic+, picURL, datesAvail, packAvail)>
+	<!ELEMENT packName (#PCDATA)> 	
+	<!ELEMENT desc (#PCDATA)> 	
+	<!ELEMENT holidayWeb (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)> 	
+	<!ELEMENT noOfNights (#PCDATA)> 	
+	<!ELEMENT popularity (#PCDATA)> 	
+	<!ELEMENT accomo (location+, addCost?)> 
+	<!ELEMENT location (#PCDATA)> 
+	<!ELEMENT addCost (#PCDATA)>
+	<!ELEMENT couponCode (#PCDATA)> 	
+	<!ELEMENT review (reviewName*, reviewD*,reviewRating*)> 	
+	<!ELEMENT reviewName (#PCDATA)>
+	<!ELEMENT reviewD (#PCDATA)>
+	<!ELEMENT reviewRating (#PCDATA)>
+	<!ELEMENT promoPic (#PCDATA)> 	
+	<!ELEMENT picURL (#PCDATA)> 	
+	<!ELEMENT datesAvail (#PCDATA)> 
+	<!ELEMENT packAvail (#PCDATA)>  
+
+	<!ATTLIST pack code CDATA #IMPLIED> 
+	<!ATTLIST Holiday category CDATA #IMPLIED>	
+	<!ENTITY AVAIL "Available">
+	<!ENTITY UNAVAI "Unavailable">
+]>
+
+
+<Holiday category = "Honeymoon">
+	<pack code = "57647">
+		<packName>Elegant Europe!</packName>
+		<desc>Enjoy and spend 10 wonder days in a gorgeous counrty with your loved one. Have the time of your life sightseeing London, check out the iconic Big Ben and the London Eye, there is so much to do! Walk along the streets at night and just admire the surroundings with your parner. Later on travel to Ireland and be amazed by the country side, it's so beautiful you will definitely fall in love.</desc>
+
+		<holidayWeb>https://www.tourradar.com/t/82996#p=2_</holidayWeb>
+
+		<cost>$2250</cost>
+
+		<noOfNights>10</noOfNights>
+
+		<popularity>4/5</popularity>
+
+		<accomo>
+			<location>Britain</location>
+			<addCost></addCost>
+		</accomo>
+
+		<couponCode></couponCode>
+
+		<review>
+			<reviewName>Kat Strider</reviewName>
+			<reviewD>Absolutely loved it! My partner and I had the most romantic trip touring Britain and would definitely recommend it for any other newlyweds :))</reviewD>
+			<reviewRating>4.5/5</reviewRating>
+		</review>
+
+		<promoPic>europeBridge.jpg</promoPic>
+
+		<picURL>images/europeBridge.jpg</picURL>
+
+		<datesAvail>1st June - 31st August</datesAvail>
+
+		<packAvail>&AVAIL;</packAvail>
+	</pack>
+
+	<pack code = "09364">
+		<packName>Perfectly Blossoming</packName>
+		<desc>There are millions of people visiting Japan every year, why miss out?! With such a gorgeous country you and your partner can have the most romantic time in Japan. Start off by flying to Kyoto and exploring the city, go to the shops and shop to your heart's content! Afterwards spend the night roaming around the city with your loved one and trying out all the new and known food your see, there is nothing better than this.</desc>
+
+		<holidayWeb>https://www.zicasso.com/luxury-vacation-japan-tours/exploring-kyushu-shikoku-islands-tour</holidayWeb>
+
+		<cost>$5999</cost>
+
+		<noOfNights>14</noOfNights>
+
+		<popularity>5/5</popularity>
+
+		<accomo>
+			<location>Japan</location>
+			<addCost></addCost>
+		</accomo>
+
+		<couponCode></couponCode>
+
+		<review>
+			<reviewName>Tyler Steinkamp</reviewName>
+			<reviewD>My partner Macaiyla and I took this trip around 2 weeks after our marriage and we weren't disappointed at all. Overall this trip was so poggers, highly recommended it for any other couple out there who just recently tied the knot.</reviewD>
+			<reviewRating>5/5</reviewRating>
+		</review>
+	
+		<promoPic>japan.jpg</promoPic>
+	
+		<picURL>images/japan.jpg</picURL>
+
+		<datesAvail>1st March - 31st April</datesAvail>
+
+		<packAvail>&AVAIL;</packAvail>
+	</pack>
+
+	<pack code = "95757">
+		<packName>Shangri-La's Beauty</packName>
+		<desc>With almost thousands if not millions of poeple visiting this island each year, the next person could be you and your parnter! Go together to an island filled with sunshine, beaches and everything you will need to just laze around and relax. Walk along the beach with your beloved parter during the beautiful nightsky, talk about nothing and everything, there is so much to enjoy here.</desc>
+
+		<holidayWeb></holidayWeb> <!-- been left out on purpose for showcase -->
+
+		<cost>$1999</cost>
+
+		<noOfNights>7</noOfNights>
+
+		<popularity>4/5</popularity>
+
+		<accomo>
+			<location>Fiji</location>
+			<addCost></addCost>
+		</accomo>
+
+		<couponCode></couponCode>
+
+		<review>
+			<reviewName>Jade Erdenay</reviewName>
+			<reviewD>My wife and I had the best time!! It was such a relaxing and nice time, couldn't have asked for more. Just had a few communication errors with the site which sort of made things annoying but other than that the actual trip was perfect! Thank you! ❤️</reviewD>
+			<reviewRating>3.5/5</reviewRating>
+		</review>
+
+		<promoPic>shangri-la.jpg</promoPic>
+
+		<picURL>images/shangri-la.jpg</picURL>
+
+		<datesAvail>1st June - 31st September</datesAvail>
+
+		<packAvail>&UNAVAI;</packAvail>
+	</pack>
+</Holiday>

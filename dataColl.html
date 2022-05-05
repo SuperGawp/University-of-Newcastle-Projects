@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--Created by: Aryan Chandra
+	file name: dataColl.html
+	Created on: 24/10/2020-->
+<html lang = "en">
+	<head>
+		<title>Holiday Collection</title>
+		<style type = "text/css">
+			address {font-size: 90%; color: white; text-align: right;} /*format the address section by aligning text to right, text colour to white and making the font size 90%*/
+		</style>
+		<link rel="stylesheet" type="text/css" href="style.css"> <!--calling the external stylesheet 'style.css'-->
+		<meta charset="UTF-8">
+
+		<script type="text/javascript">
+			function checkValidation()
+			{
+				var emailPat = /^.*@.*\..*$/;
+				if(document.easyform.yourname.value == "")
+				{
+					alert("Please provide your name");
+					return false;
+				}
+
+				if(document.easyform.email.value == "")
+				{
+					alert("Please provide your email address");
+					return false;
+				}
+
+				if(document.easyform.email.value.indexOf("@") == -1)
+				{
+					alert("Must contain an '@'");
+					return false;
+				}
+				else if(!emailPat.test(document.easyform.email.value))
+				{
+					alert("Invalid email address");
+					return false;
+				}
+
+				if(document.easyform.phone.value.length != 10)
+				{
+					alert("Please enter a valid number")
+					return false;
+				}
+
+				if(document.easyform.birthyear.value.length != 4)
+            	{
+            		alert("Birth year must be 4 digits long");
+            		return false;
+            	}
+
+            	if(!document.easyform.binaryQ[0].checked && !document.easyform.binaryQ[1].checked)
+				{
+					alert("Select Yes or No")
+					return false;
+				}
+
+				if(document.easyform.binaryQ.value == "")
+				{
+					alert('Need to select "Yes" or "No"');
+					return false;
+				}
+
+				if(window.document.easyform.nameHoliday.value == "")
+				{
+					alert("Please provide name of Holiday Package");
+					return false;
+				}				
+
+				if(document.easyform.getElementById(category).value == "")
+				{
+					alert("Select a Holiday Category");
+					return false;
+				}
+
+				if(document.easyform.description.value == "")
+				{
+					alert("Please a description of the holiday");
+					return false;
+				}
+
+				if(!document.easyform.iagree.checked)
+            	{
+            		alert("Please agree to Terms and Condition & Privacy Policy");
+            		return false;
+            	}
+				return true;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div style="border: 3px outset pink;">
+			<h1>Holiday Data Collection</h1>
+		</div> 
+
+		<div class="navigation"> <!-- navigation bar-->
+			<nav>
+				<div class="button" style="border: 3px outset pink;">
+					<a href="index.html">Home</a>
+				</div>
+			
+				<div class="button" style="border: 3px outset pink; font-size: 23.5px">Categories
+					<div class="dropDownContent">
+							<a href = "honeymoon.xml"> Honeymoon </a>
+							<a href = "budget.xml"> Budget </a>
+					</div>
+				</div>
+			
+				<div class="button" style="border: 3px outset pink;">
+					<a href="dataColl.html">Insert Holiday Pack</a>
+				</div>
+
+				<div class="button" style="border: 3px outset pink;">
+					<a href="terms&condition.html">Terms & Conditions</a>
+				</div>
+
+				<div class="button" style="border: 3px outset pink;">
+					<a href="privacyPolicy.html">Privacy Policy</a>
+				</div>
+			
+				<div class=" button" style="border: 3px outset pink;">
+					<a href="https://www.youtube.com/watch?v=4cxMBTv6dRM&ab_channel=UniversityofNewcastle%2CAustralia">About Us</a>
+				</div>
+			
+				<div class="button" style="border: 3px outset pink;">
+					<a href="contact.html">Contact Us</a>
+				</div>
+			</nav>
+		</div>
+
+
+		<form name="easyform" method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi" onsubmit="return checkValidation()">
+			<div style="border: 3px outset pink;">
+				<h2 id="datah2">Personal Information</h2> <p style="font-size: 15px"><b><span class="REQUIRED"> *</span> - Required</b></p>
+				<div>
+					<label for="yourname">Enter your name: <span class="REQUIRED"> *</span></label> 
+	                <input type="text" name="yourname" id="yourname" placeholder="eg. John Smith" />
+				</div>	
+
+				<div>
+					<label for="email">E-Mail address: <span class="REQUIRED"> *</span></label> 
+					<input type="text" name="email" id="email" placeholder="random@hotmail.com"  />
+				</div>
+
+				<div>
+					<label for="phone">Phone Number: <span class="REQUIRED"> *</span></label> 
+					<input type="text" name="phone" id="phone" placeholder="0123456789" />
+				</div>
+
+				<div>
+					<label for="birthyear">Birth year: <span class="REQUIRED"> *</span></label> 
+					<input type="text" name="birthyear" id="birthyear" />
+				</div>
+
+				<div>
+					<label for="previousHol">Submitted any previous holidays? If so, how many: </label> 
+					<input type="text" name="previousHol" id="previousHol" />
+				</div>
+
+				<div>Travelled in the past 5 years? <span class="REQUIRED"> *</span>
+	                <div id="binaryQ">
+	                    <label for="yes">Yes</label> 
+	                    <input type="radio" name="binaryQ" value="yes" id="yes" checked/><br /> 
+	                    <label for="no">No</label> 
+	                    <input type="radio" name="binaryQ" value="no" id="no" /><br /> 
+	                </div>
+	            </div>
+	        </div> <br>
+
+	        <div style="border: 3px outset pink;">
+				<h2 id="h2">Holiday Information</h2> <p style="font-size: 15px"><b><span class="REQUIRED"> *</span> - Required</b></p>
+				<div>
+					<label for="nameHoliday">Please enter the name of your holiday: <span class="REQUIRED"> *</span></label> 
+					<input type="text" name="nameHoliday" id="nameHoliday" />
+				</div>
+
+				<div>Please select the category of the Holiday Package: <span class="REQUIRED"> *</span>
+	                <div id="category">
+	                    <select name="category">
+	                        <option>select one</option>
+	                        <option value="honeymoon">Honeymoon Holidays</option>
+	                        <option value="budget">Budget Holidays</option>
+	                        <option value="adventure">Adventure Holidays</option>
+	                        <option value="beach">Beach Holidays</option>
+	                        <option value="family">Family Holidays</option>
+	                        <option value="luxury">Luxury Holidays</option>
+	                        <option value="season">Season Holidays</option>
+	                        <option value="cruise">Cruise Holidays</option>
+	                    </select>
+	                </div>
+	            </div>
+
+	            <div>
+	            	<label for="description">Enter a desc. of the holiday: <span class="REQUIRED"> *</span></label> <br>
+	            	<textarea id="description" name="description" rows="4" cols="50"></textarea>
+	            </div>
+
+	            <div>
+	            	<label for="linkHoliday">Link related to website:</label> <br>
+	            	<textarea id="linkHoliday" name="linkHoliday" rows="2" cols="50"></textarea>
+	            </div>
+
+	            <div>Included in the package: 
+	                <div id="check">
+	                	<input type="checkbox" name="check" value="AccomoPricing" id="AccomoPricing" />
+	                	<label for="AccomoPricing">Accomodation Pricing</label> 
+	                     
+	                    <input type="checkbox" name="check" value="Coupon" id="Coupon" />
+	                    <label for="Coupon">Coupon Code</label>						 
+	                </div>
+	            </div>
+
+	            <p style="font-size: 15px">
+					<input type="checkbox" name="iagree" value="iagree" id="iagree" />
+					<label for="iagree">I agree to the <a href = "terms&condition.html"> Terms and Conditions</a> & <a href="privacyPolicy.html">Privacy Policy</a><span class="REQUIRED"> *</span></label>
+	            </p>
+	            <input type="Submit" value="Click Here to Submit" /> <input type="reset" />
+	        </div>
+		</form> <br>
+
+		<hr>
+			<address class = "COPYRIGHT">
+				Copyright holder of webpage:
+				Aryan Chandra <br> <!--name of author-->
+				E-Mail: C3360071@uon.edu.au <br> <!--email address of author-->
+				C3360071 <br> <!--student ID of author-->
+				<a href="https://www.w3schools.com/">https://www.w3schools.com/</a> <!--course related website-->
+			</address> <br>
+			<p class = "rightCOPYRIGHT">COPYING THIS WEBPAGE IS VOILATING COPYRIGHT LAWS</p> <!--copyright warning-->
+		<hr>
+	</body>
+</html>
